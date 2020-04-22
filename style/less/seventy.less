@@ -43,6 +43,7 @@
   }
   &__reservoir {
     justify-content: space-around;
+    align-items: flex-start;
     margin-bottom: 78px;
     width: 97%;
     &--text {
@@ -69,7 +70,7 @@
       background: #005C93;
       padding: 5px 37px 5px 40px;
       box-sizing: border-box;
-      width: 56%;
+      width: 58%;
       text-align: right;
 
     }
@@ -266,8 +267,9 @@
     }
   }
   &__hydraturbine {
-    right: -137px;
-    bottom: -270px;
+    bottom: -67%;
+    right: -12%;
+    z-index: -1;
     position: absolute;
     &--wrap {
       position: relative;
@@ -304,9 +306,9 @@
       }
     }
   }
-  &__flooding{
+  &__flooding {
     position: relative;
-    &:before{
+    &:before {
       content: "";
       position: absolute;
       top: -13px;
@@ -315,7 +317,7 @@
       height: 13px;
       background: #E16010;
     }
-    &--info{
+    &--info {
       position: absolute;
       left: 0;
       bottom: 27px;
@@ -348,4 +350,246 @@
 .seventy .seventy__info--data {
   font-size: 80px;
   margin-right: 34px;
+}
+
+@media screen and (max-width: 1400px) {
+  .seventy__hydraturbine {
+    right: -6%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .seventy__panorama--block {
+    width: 59%;
+  }
+
+  .seventy__turbine--info {
+    width: 33%;
+  }
+
+  .seventy__panorama--info {
+    width: 34%;
+  }
+
+  .seventy__reservoir--text {
+    width: 41%;
+    margin-top: 0;
+  }
+
+  .seventy__mounting {
+    top: -93px;
+  }
+
+  .seventy__mounting--info {
+    width: 54%;
+  }
+
+  .seventy__wrap {
+    margin-bottom: 95px;
+  }
+
+  .seventy__hydraturbine {
+    bottom: auto;
+    top: 79%;
+  }
+
+  .seventy__box {
+    margin-bottom: 310px;
+  }
+
+  .seventy__info {
+    width: 95%;
+  }
+
+  .seventy__flooding--info {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .seventy__panorama--info {
+    width: 44%;
+  }
+
+  .seventy__turbine--info {
+    width: 42%;
+    top: 48%;
+  }
+
+  .seventy__panorama--block {
+    width: 76%;
+  }
+
+  .seventy__panorama {
+    padding-bottom: 373px;
+    margin-bottom: 30px;
+  }
+
+  .seventy__reservoir {
+    width: 100%;
+  }
+
+  .seventy__reservoir--text {
+    width: 45%;
+  }
+
+  .seventy__reservoir--info {
+    padding: 10px;
+    width: 51%;
+  }
+
+  .seventy__wrap {
+    margin-left: 0;
+  }
+
+  .seventy__mounting--info {
+    width: 65%;
+    top: 24px;
+  }
+
+  .seventy__text--block {
+    width: 48%;
+  }
+
+  .seventy__overlap--text {
+    width: 85%;
+  }
+
+  .seventy__minister--info {
+    top: 21%;
+    padding: 9px;
+    width: 47%;
+  }
+
+  .seventy__hydraturbine {
+    position: static;
+  }
+
+  .seventy__box {
+    margin-bottom: 35px;
+  }
+
+  .seventy__info {
+    width: 100%;
+  }
+
+  .seventy__flooding--info {
+    width: 38%;
+    bottom: 10px;
+  }
+  .seventy .seventy__panorama--data {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .seventy__turbine--wrap:after {
+    display: none;
+  }
+  .seventy__panorama {
+    padding-bottom: 403px;
+  }
+  .seventy__panorama--block {
+    width: 100%;
+    right: 0;
+  }
+  .seventy__panorama--info {
+    width: 56%;
+    padding: 15px;
+  }
+  .seventy__turbine--info {
+    width: 50%;
+    top: 86%;
+    padding: 15px;
+  }
+  .seventy .seventy__reservoir{
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+  .seventy__reservoir--text {
+    width: 100%;
+  }
+  .seventy__reservoir--wrap {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .seventy .seventy__reservoir--row{
+    flex-direction: column;
+    width: 80%;
+  }
+  .seventy .seventy__wrap{
+    flex-direction: column;
+  }
+  .seventy__mounting {
+    position: static;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .seventy__river {
+    width: 100%;
+  }
+  .seventy__mounting--info {
+    width: 46%;
+  }
+  .seventy .seventy__text{
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+  .seventy .seventy__text--block{
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 25px;
+  }
+  .seventy__text--inner{
+    margin-top: 0;
+  }
+  .seventy .seventy__row{
+    flex-direction: column;
+  }
+  .seventy__hydro {
+    margin-top: 0;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .seventy__overlap {
+    width: 100%;
+  }
+  .seventy__overlap--text {
+    width: 100%;
+    text-align: left;
+  }
+  .seventy__box {
+    width: 100%;
+  }
+  .seventy__minister {
+    width: 100%;
+  }
+  .seventy__minister--info {
+    top: 35%;
+    width: 57%;
+  }
+  .seventy__hydraturbine--info {
+    text-align: left;
+    width: 39%;
+    bottom: 16%;
+    left: 0;
+  }
+  .seventy .seventy__info{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .seventy__info {
+    width: 100%;
+    margin: 0 auto 75px;
+  }
+  .seventy__flooding--info {
+    width: 49%;
+    position: static;
+  }
+}
+@media screen and (max-width: 576px){
+  .seventy{
+    margin-bottom: 80px;
+    padding: 0 5px;
+  }
 }
