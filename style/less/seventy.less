@@ -1,0 +1,275 @@
+.seventy {
+  margin-bottom: 250px;
+  &__panorama {
+    position: relative;
+    padding-bottom: 459px;
+    margin-bottom: 96px;
+    &--wrap {
+      position: relative;
+    }
+    &--info {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #005C93;
+      padding: 15px 20px 15px 35px;
+      box-sizing: border-box;
+      width: 28%;
+      text-align: right;
+    }
+    &--block {
+      position: absolute;
+      right: 5%;
+      bottom: 35px;
+      width: 50%;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    &--text {
+      position: relative;
+      width: 68%;
+      box-sizing: border-box;
+      margin-left: 12px;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 47px;
+        left: -12px;
+        top: 0;
+        background: #E16010;
+      }
+    }
+  }
+  &__reservoir {
+    justify-content: space-around;
+    margin-bottom: 78px;
+    width: 97%;
+    &--text {
+      width: 34%;
+      margin-top: 34px;
+    }
+    &--wrap {
+      position: relative;
+      width: 51%;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 306px;
+        height: 8px;
+        right: 0;
+        bottom: -8px;
+        background: #005C93;
+      }
+    }
+    &--info {
+      position: absolute;
+      left: 0;
+      top: 16%;
+      background: #005C93;
+      padding: 5px 37px 5px 40px;
+      box-sizing: border-box;
+      width: 56%;
+      text-align: right;
+
+    }
+    &--row {
+      margin-bottom: 40px;
+    }
+  }
+  &__paragraph {
+    margin-left: 19px;
+  }
+  &__turbine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    &--wrap {
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 306px;
+        height: 8px;
+        left: 0;
+        bottom: -8px;
+        background: #E16010;
+      }
+    }
+    &--info {
+      position: absolute;
+      left: 0;
+      top: 57%;
+      width: 28%;
+      text-align: right;
+      background: #E16010;
+      padding: 15px 25px;
+      box-sizing: border-box;
+    }
+  }
+  &__wrap {
+    position: relative;
+    margin-left: 6%;
+    margin-bottom: 76px;
+  }
+  &__mounting {
+    position: absolute;
+    top: -143px;
+    left: 0;
+    width: 56%;
+    z-index: 9;
+    &--wrap {
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 483px;
+        height: 10px;
+        left: -6%;
+        bottom: -10px;
+        background: #E16010;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        width: 375px;
+        height: 9px;
+        left: 10%;
+        top: -9px;
+        background: #005C93;
+      }
+    }
+    &--info {
+      position: absolute;
+      top: 57px;
+      left: 0;
+      padding: 13px;
+      box-sizing: border-box;
+      background: #E16010;
+      width: 42%;
+    }
+  }
+  &__river {
+    position: relative;
+    margin-left: auto;
+    width: 73%;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 455px;
+      height: 8px;
+      right: 19%;
+      top: -8px;
+      background: #005C93;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 111px;
+      height: 10px;
+      left: 21%;
+      z-index: 9;
+      bottom: -10px;
+      background: #005C93;
+    }
+    &--info {
+      position: absolute;
+      right: 0;
+      bottom: 18%;
+      background: #005C93;
+      padding: 17px 9px;
+    }
+  }
+  &__text {
+    justify-content: space-around;
+    align-items: flex-start;
+    &--block {
+      width: 39%;
+    }
+    &--inner {
+      margin-top: 116px;
+    }
+  }
+  &__row {
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 59px;
+  }
+  &__hydro {
+    margin-top: 76px;
+    width: 40%;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -7px;
+      width: 7px;
+      height: 100%;
+      background: #E16010;
+    }
+    &--text {
+      margin: 25px 0 0 18px;
+    }
+  }
+  &__overlap {
+    width: 40%;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -7px;
+      width: 7px;
+      height: 100%;
+      background: #005C93;
+    }
+    &--text {
+      text-align: right;
+      margin-top: 27px;
+      margin-right: 27px;
+      width: 53%;
+      margin-left: auto;
+
+    }
+  }
+  &__box{
+    position: relative;
+    width: 93%;
+    margin-left: auto;
+  }
+  &__minister{
+    width: 63%;
+  &--image{
+    position: relative;
+  }
+    &--info{
+      position: absolute;
+      right: 0;
+      top: 53%;
+      background: #E16010;
+      padding: 14px 50px;
+      width: 37%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.seventy .seventy__data:before {
+  display: none;
+}
+
+.seventy .seventy__panorama--data {
+  color: #FFFFFF;
+  background: #005C93;
+  padding: 0 5px;
+}
+
+.seventy .seventy__panorama--data:before {
+  display: none;
+}
+
+.seventy .seventy__panorama--text {
+  padding: 14px 25px 50px;
+}

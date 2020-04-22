@@ -1,0 +1,1257 @@
+@import "thirty";
+@import "forty";
+@import "fifty";
+@import "sixty";
+@import "seventy";
+
+@font-face {
+  font-family: 'Rodchenko';
+  src: url('../../fonts/Rodchenko Condensed.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Regular';
+  src: url('../../fonts/Avenir-Roman.eot');
+  src: url('../../fonts/Avenir-Roman.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/Avenir-Roman.woff') format('woff'),
+  url('../../fonts/Avenir-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next Cyr Regular';
+  src: url('../../fonts/AvenirNextCyr-Regular.eot');
+  src: url('../../fonts/AvenirNextCyr-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/AvenirNextCyr-Regular.woff') format('woff'),
+  url('../../fonts/AvenirNextCyr-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.content-container {
+  max-width: 1110px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.content-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.content-justify {
+  justify-content: space-between;
+}
+
+.content-image {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.content-text {
+  font-family: "Avenir Regular", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  color: #2D2D2D;
+}
+
+.content-text-next {
+  font-family: "Avenir Next Cyr Regular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.content-text-white {
+  color: #FFFFFF;
+}
+
+.content-data {
+  font-family: "Rodchenko", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #E16010;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    background: #005C93;
+    height: 100%;
+    width: 6px;
+    top: 0;
+    left: -19px;
+  }
+}
+
+.content-button {
+  background: #005C93;
+  font-family: "Rodchenko", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: none;
+}
+
+.content-wrap {
+  background: #FFFFFF;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+//start header
+
+.header {
+  position: relative;
+  margin-bottom: 60px;
+  margin-top: 4px;
+  &__heading {
+    display: none;
+    margin: 13px auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 88%;
+
+  }
+  &__logo {
+    display: block;
+    width: 35%;
+  }
+  &__box {
+    display: none;
+    &--open {
+      display: block;
+      position: absolute;
+      top: 38px;
+      width: 100%;
+      background: #FFFFFF;
+      left: 0;
+      z-index: 99;
+    }
+  }
+  &__close {
+    display: none;
+  }
+  &__hidden {
+    display: none;
+  }
+  &__visible {
+    display: block;
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--item {
+      margin-bottom: 20px;
+    }
+    &--link {
+      font-family: "Rodchenko", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 35px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #000000;
+      text-decoration: none;
+      display: block;
+    }
+
+  }
+  &__yellow {
+    color: #E16010;
+  }
+  &__blue {
+    color: #005C93;
+  }
+  &__text {
+    font-family: "Rodchenko", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+    margin: 32px auto 30px;
+    &--active {
+      color: #005C93;
+    }
+  }
+  &__video {
+    margin-bottom: 50px;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+  &__title {
+    font-family: "Rodchenko", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #005C93;
+    position: relative;
+    margin-left: 25px;
+    margin-bottom: 19px;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -25px;
+      width: 12px;
+      height: 70px;
+      background: #005C93;
+    }
+  }
+  &__image {
+    width: 100%;
+    margin: 0 auto 53px;
+    display: block;
+    height: 317px;
+  }
+  &__film {
+    display: block;
+    position: relative;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__play {
+    display: none;
+  }
+  &__subtitle {
+    font-family: "Avenir Regular", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 94px;
+    color: #FFFFFF;
+    margin-bottom: 74px;
+  }
+  &__name {
+    font-family: "Avenir Regular", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin: 0 15px 13px auto;
+  }
+  &__wrap {
+    transition: top 0.3s linear;
+    top: -5%;
+    &--fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #FFFFFF;
+      width: 100%;
+      z-index: 999;
+      padding: 10px 0;
+    }
+  }
+  &__menu {
+    width: 84%;
+    background: #FFFFFF;
+    margin: 0 auto;
+    padding: 15px 0;
+  }
+  &__list {
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__link {
+    font-family: "Rodchenko", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    color: #005C93;
+    text-decoration: none;
+    position: relative;
+    padding: 0 18px;
+    display: block;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: #005C93;
+    }
+    &--active {
+      color: #E16010;
+      &:after {
+        background: #E16010;
+      }
+    }
+    &--red {
+      color: #930000;
+      &:after {
+        background: #930000;
+      }
+      &:before {
+        content: "";
+        background: url("../../img/forty/star.svg") no-repeat;
+        background-position: center;
+        position: absolute;
+        top: -30px;
+        width: 100%;
+        height: 24px;
+        left: 0;
+      }
+    }
+    &:hover {
+      color: #E16010;
+      &:after {
+        background: #E16010;
+
+      }
+    }
+  }
+}
+
+.header__box:hover .header__text {
+  color: #005C93;
+}
+.header__box:hover .header__navigation--blue {
+  color: #005C93;
+}
+.header__box:hover .header__navigation--yellow {
+  color: #E16010;
+}
+//finish header
+
+//start main
+
+.main {
+  margin-bottom: 265px;
+  &__content {
+    justify-content: space-between;
+
+  }
+  &__title {
+    font-family: "Rodchenko", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 75px;
+    text-transform: uppercase;
+    color: #E16010;
+    display: none;
+    margin-left: 25px;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 45%;
+      height: 8px;
+      right: 0;
+      bottom: 5px;
+      background: #005C93;
+    }
+  }
+  &__text {
+    width: 87%;
+    margin-bottom: 31px;
+  }
+  &__info {
+    margin-left: 16px;
+    &--mobile {
+      display: none;
+    }
+    &--open {
+      background: #FFFFFF;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+  }
+  &__wrap {
+    width: 48%;
+    position: relative;
+    margin-bottom: 86px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 427px;
+      height: 12px;
+      left: -29px;
+      bottom: -39px;
+      background: #E5E5E5;
+    }
+  }
+  &__image {
+    position: relative;
+    padding-top: 74px;
+    width: 45%;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 16%;
+      margin: auto;
+      width: 51%;
+      height: 533px;
+      background: #E16010;
+      z-index: -1;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 23%;
+      height: 15px;
+      right: 35px;
+      top: 176px;
+      background: #005C93;
+      transform: rotate(-38.46deg);
+    }
+  }
+  &__picture {
+    margin-left: -53px;
+    margin-bottom: 23px;
+    display: block;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 67px;
+      height: 10px;
+      left: 0;
+      top: -10px;
+      background: #C4C4C4;
+    }
+  }
+  &__description {
+    width: 45%;
+    margin-left: 18px;
+    margin-bottom: 41px;
+  }
+  &__paragraph {
+    width: 75%;
+  }
+  &__engineer {
+    position: relative;
+    display: block;
+    &:after {
+      content: "";
+      position: absolute;
+      width: calc(100% + 90px);
+      height: 15px;
+      right: 0;
+      bottom: -12px;
+      background: #005C93;
+    }
+  }
+  &__box {
+    width: 63%;
+    margin-bottom: 50px;
+  }
+  &__scene {
+    margin-bottom: 49px;
+    display: block;
+    margin-left: 7px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 15px;
+      left: 0;
+      top: -15px;
+      background: #005C93;
+    }
+  }
+  &__element {
+    width: 29%;
+    padding-top: 5px;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 462px;
+      height: 15px;
+      right: 54%;
+      top: 296px;
+      background: #E16010;
+    }
+  }
+  &__wrapper {
+    justify-content: space-between;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 70%;
+      height: 15px;
+      left: -50px;
+      bottom: -9px;
+      background: #E16010;
+      transform: rotate(-0.12deg);
+    }
+  }
+  &__book {
+    margin-bottom: 31px;
+    display: block;
+    width: 83%;
+  }
+  &__plan {
+    text-align: right;
+    width: 85%;
+  }
+  &__button {
+    font-family: "PT Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 19px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 55%;
+    justify-content: space-between;
+    display: none;
+    &--close {
+      display: none;
+    }
+
+  }
+}
+
+//finish main
+
+//start test
+.test {
+  &__gif {
+    position: absolute;
+    top: -138px;
+    right: -132px;
+    width: 366px;
+    height: 366px;
+    display: block;
+  }
+  &__title {
+    font-family: "Rodchenko", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: right;
+    color: #E26110;
+    margin-bottom: 35px;
+    width: 100%;
+  }
+  &__button {
+    text-align: right;
+    width: 77%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+
+  }
+  &__text {
+    width: 36%;
+    margin-right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+  }
+  &__image {
+    z-index: 9;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: -67px;
+      width: 201px;
+      height: 15px;
+      background: #E16010;
+      transform: rotate(-30deg);
+    }
+  }
+  &__wrap {
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 32px;
+      left: 15px;
+      width: 49%;
+      height: 15px;
+      background: #E16010;
+      transform: rotate(-0.12deg);
+      z-index: 99;
+    }
+  }
+}
+
+//finish main
+
+//start now
+
+.now {
+  position: relative;
+  padding-top: 138px;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1225px;
+    background: url("../../img/home/background-now.png") no-repeat;
+    z-index: -2;
+    background-position: center;
+    background-size: cover;
+  }
+  &__wrapper {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 38px;
+      width: 504px;
+      height: 22px;
+      background: #005C93;
+      z-index: -1;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: -178px;
+      bottom: -1px;
+      width: 100%;
+      height: auto;
+      background: #F2F2F2;
+      z-index: -2;
+    }
+  }
+  &__wrap {
+    background: #E16010;
+    transform: rotate(-0.12deg);
+    padding: 18px 14% 18px 10%;;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 85px;
+    margin-left: 35px;
+
+  }
+  &__title {
+    font-family: "Rodchenko", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+  &__gallery {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 270px;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 330px;
+      right: -60px;
+      width: 201px;
+      height: 15px;
+      background: #E16010;
+      transform: rotate(-30deg);
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 201px;
+      height: 15px;
+      left: -60px;
+      top: 10px;
+      background: #005C93;
+      transform: rotate(-30deg);
+    }
+  }
+  &__image {
+    margin-bottom: 27px;
+    display: block;
+  }
+}
+
+//finish now
+
+//start footer
+.footer {
+  background: #F1F3F6;
+  &__image {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+//finish footer
+
+///Media
+
+@media screen and (max-width: 1400px) {
+  .test__gif {
+    right: -59px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .now__image {
+    width: 30%;
+  }
+
+  .test__title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .now__title {
+    font-size: 40px;
+  }
+
+  .test__gif {
+    right: -48px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header__menu {
+    width: 100%;
+  }
+
+  .test__image:after {
+    content: "";
+    right: -26px;
+    width: 85px;
+  }
+
+  .main__engineer:after {
+    width: calc(100% + 50px);
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .header__link {
+    padding: 0 9px;
+  }
+
+  .test__text {
+    width: 55%;
+    margin-right: 20px;
+  }
+
+  .test__title {
+    font-size: 34px;
+    line-height: 40px;
+    margin-bottom: 25px;
+  }
+
+  .now__title {
+    font-size: 34px;
+  }
+
+  .main__element:after {
+    display: none;
+  }
+
+  .main__engineer:after {
+    width: calc(100% + 45px);
+  }
+
+  .test__gif {
+    right: -35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__link {
+    font-size: 22px;
+    padding: 0 5px;
+  }
+
+  .content-container {
+    width: 95%;
+  }
+
+  .now__image {
+    width: 47%;
+  }
+
+  .test__wrap {
+    flex-direction: column;
+  }
+
+  .test__text {
+    width: 45%;
+    margin-bottom: 25px;
+  }
+
+  .test__gif {
+    right: 0;
+    width: 45%;
+    height: auto;
+    top: -7px;
+  }
+
+  .test__button {
+    width: 288px;
+  }
+
+  .test__image {
+    width: 100%;
+  }
+
+  .test__image:after {
+    display: none;
+  }
+
+  .test__wrap:after {
+    display: none;
+  }
+
+  .now__wrap {
+    padding: 18px;
+  }
+
+  .now__gallery:after,
+  .now__gallery:before {
+    display: none;
+  }
+
+  .main__content {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+
+  .main__image:before,
+  .main__image:after {
+    display: none;
+  }
+
+  .main__image {
+    padding-top: 0;
+    width: 100%;
+    margin-bottom: 20px;
+
+  }
+
+  .main__text {
+    width: 100%;
+  }
+
+  .main__wrap {
+    width: 96%;
+    margin: 0 auto;
+  }
+
+  .main__engineer:after {
+    display: none;
+  }
+
+  .main__wrap:before {
+    display: none;
+  }
+
+  .main__description {
+    width: 96%;
+    margin: 0 auto;
+  }
+
+  .main__description {
+    width: 58%;
+    position: absolute;
+    top: 211px;
+    left: 0;
+    background: #E16010;
+    padding: 6px;
+    z-index: 9;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .main__description p {
+    font-size: 8px;
+    line-height: 120%;
+    color: #FFFFFF;
+  }
+
+  .main__item {
+    position: relative;
+  }
+
+  .main__wrapper {
+    flex-direction: column;
+  }
+
+  .main__box {
+    width: 100%;
+  }
+
+  .main__paragraph {
+    width: 91%;
+    margin: 0 auto;
+  }
+
+  .main__element {
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .main__plan {
+    text-align: left;
+    background: #E16010;
+    position: absolute;
+    width: 47%;
+    bottom: 125px;
+    left: 0;
+    font-size: 8px;
+    line-height: 120%;
+    color: #FFFFFF;
+    padding: 6px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .main__info {
+    margin-bottom: 31px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .content-container {
+    width: 100%;
+  }
+
+  .header__heading {
+    display: flex;
+  }
+
+  .header__video {
+    margin-bottom: 40px;
+  }
+
+  .header__title {
+    font-size: 30px;
+    margin: 0 auto 50px;
+    text-align: center;
+    &:after {
+      display: none;
+    }
+  }
+
+  .header__play {
+    display: block;
+  }
+
+  .header__subtitle,
+  .header__name,
+  .header__menu {
+    display: none;
+  }
+
+  .header__film {
+    width: 94%;
+    margin: 0 auto;
+    &:after {
+      content: "";
+      position: absolute;
+      top: -19px;
+      left: 25%;
+      right: 25%;
+      width: 168px;
+      height: 8px;
+      background: #E95F10;
+      margin: auto;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -19px;
+      left: 25%;
+      right: 25%;
+      width: 168px;
+      height: 8px;
+      background: #005C93;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      margin: auto;
+    }
+  }
+
+  .header__info {
+    justify-content: center;
+  }
+
+  .header__image {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    height: 224px;
+  }
+
+  .now__wrapper:after {
+    display: none;
+  }
+
+  .test__text {
+    width: 80%;
+    margin: 0 auto 25px;
+  }
+
+  .test__gif {
+    display: none;
+  }
+
+  .now__image {
+    width: 100%;
+  }
+
+  .main {
+    margin-bottom: 80px;
+  }
+
+  .main__title {
+    display: block;
+  }
+
+  .main__text--name {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .main__text--block {
+    display: block;
+  }
+
+  .main__description {
+    width: 68%;
+    top: 132px;
+  }
+
+  .main__picture {
+    margin-left: 0;
+  }
+
+  .main__info {
+    display: none;
+  }
+
+  .main__info--open {
+    display: block;
+  }
+
+  .main__scene img {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+  }
+
+  .main__scene:before {
+    display: none;
+  }
+
+  .content-text {
+    font-weight: 500;
+  }
+
+  .main__box:after {
+    display: none;
+  }
+
+  .main__element {
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .main__plan {
+    width: 73%;
+    bottom: 65px;
+  }
+
+  .main__button--open {
+    display: flex;
+  }
+
+  .main__button--hidden {
+    display: none;
+  }
+
+  .main__button--visible {
+    display: flex;
+  }
+
+  .main__wrap {
+    margin-bottom: 27px;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+  .main__title:after {
+    width: 35%;
+  }
+}
+
+//Animate
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes slideInUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
