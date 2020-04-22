@@ -234,17 +234,28 @@
 
     }
   }
-  &__box{
+  &__box {
     position: relative;
     width: 93%;
     margin-left: auto;
+    margin-bottom: 232px;
   }
-  &__minister{
+  &__minister {
     width: 63%;
-  &--image{
-    position: relative;
-  }
-    &--info{
+    &--image {
+      position: relative;
+      display: block;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 140px;
+        height: 11px;
+        top: -14px;
+        right: 14px;
+        background: #005C93;
+      }
+    }
+    &--info {
       position: absolute;
       right: 0;
       top: 53%;
@@ -252,6 +263,66 @@
       padding: 14px 50px;
       width: 37%;
       box-sizing: border-box;
+    }
+  }
+  &__hydraturbine {
+    right: -137px;
+    bottom: -270px;
+    position: absolute;
+    &--wrap {
+      position: relative;
+    }
+    &--info {
+      position: absolute;
+      text-align: right;
+      width: 48%;
+      bottom: 28%;
+      left: -16%;
+    }
+  }
+  &__info {
+    width: 80%;
+    margin: 0 auto 121px;
+    align-items: center;
+    &--name {
+      font-family: "Rodchenko", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 50px;
+      line-height: 120%;
+      color: #000000;
+      padding-left: 19px;
+      position: relative;
+      &:before {
+        content: "";
+        width: 12px;
+        background: #005C93;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  &__flooding{
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      top: -13px;
+      left: 0;
+      width: 223px;
+      height: 13px;
+      background: #E16010;
+    }
+    &--info{
+      position: absolute;
+      left: 0;
+      bottom: 27px;
+      padding: 15px 22px;
+      box-sizing: border-box;
+      background: #005C93;
+      width: 24%;
     }
   }
 }
@@ -272,4 +343,9 @@
 
 .seventy .seventy__panorama--text {
   padding: 14px 25px 50px;
+}
+
+.seventy .seventy__info--data {
+  font-size: 80px;
+  margin-right: 34px;
 }
