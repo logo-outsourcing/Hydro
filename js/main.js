@@ -19,7 +19,10 @@ $(document).ready(function () {
         buttons: [
             "close",
         ],
-        touch: false
+        touch: {
+            vertical: false, // Allow to drag content vertically
+            momentum: false // Continue movement after releasing mouse/touch when panning
+        },
     });
 
 // Open burger menu
