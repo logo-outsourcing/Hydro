@@ -90,8 +90,122 @@
     justify-content: space-between;
     margin-bottom: 76px;
   }
-  &__info{
+  &__info {
     width: 47%;
+  }
+  &__station {
+    width: 88%;
+    margin: 0 auto 73px;
+    position: relative;
+    &--info {
+      position: absolute;
+      background: #E16010;
+      padding: 16px 20px;
+      bottom: 6%;
+      left: 0;
+      box-sizing: border-box;
+    }
+  }
+  &__row {
+    width: 84%;
+    margin: 0 auto 137px;
+  }
+  &__panorama {
+    position: relative;
+    width: 83%;
+    margin: 0 auto 130px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 305px;
+      height: 12px;
+      right: -30px;
+      top: -12px;
+      background: #E16010;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 305px;
+      height: 12px;
+      left: -30px;
+      bottom: -12px;
+      background: #E16010;
+    }
+    &--info {
+      position: absolute;
+      background: #005C93;
+      padding: 7px 20px;
+      box-sizing: border-box;
+      right: 0;
+      bottom: 7%;
+      width: 34%;
+      text-align: right;
+    }
+  }
+  &__branch {
+    width: 83%;
+    position: relative;
+    margin-bottom: 120px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 305px;
+      height: 12px;
+      right: -146px;
+      top: -6px;
+      background: #005C93;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 305px;
+      height: 12px;
+      left: -106px;
+      bottom: -12px;
+      background: #005C93;
+    }
+    &--info {
+      position: absolute;
+      padding: 7px 20px 7px 93px;
+      box-sizing: border-box;
+      background: #E16010;
+      left: -5%;
+      bottom: 5%;
+      width: 43%;
+    }
+  }
+  &__visit{
+    margin-left: auto;
+    width: 83%;
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      width: 305px;
+      height: 12px;
+      left: 20%;
+      top: -6px;
+      background: #E16010;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      width: 305px;
+      height: 12px;
+      left: 38%;
+      bottom: -12px;
+      background: #E16010;
+    }
+    &--info{
+      position: absolute;
+      left: -6%;
+      bottom: 5%;
+      width: 44%;
+      padding: 7px 63px 7px 93px;
+      box-sizing: border-box;
+      background: #005C93;
+    }
   }
 }
 
@@ -103,4 +217,8 @@
     left: auto;
     height: 47px;
   }
+}
+.ninety .ninety__paragraph{
+  padding: 14px 23px 30px;
+  box-sizing: border-box;
 }
