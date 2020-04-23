@@ -20,7 +20,7 @@ $(document).ready(function () {
             "close",
         ],
         touch: {
-            vertical: false, // Allow to drag content vertically
+            vertical: true, // Allow to drag content vertically
             momentum: false // Continue movement after releasing mouse/touch when panning
         },
     });
