@@ -175,11 +175,11 @@
       width: 43%;
     }
   }
-  &__visit{
+  &__visit {
     margin-left: auto;
     width: 83%;
     position: relative;
-    &:before{
+    &:before {
       content: "";
       position: absolute;
       width: 305px;
@@ -188,7 +188,7 @@
       top: -6px;
       background: #E16010;
     }
-    &:after{
+    &:after {
       content: "";
       position: absolute;
       width: 305px;
@@ -197,7 +197,7 @@
       bottom: -12px;
       background: #E16010;
     }
-    &--info{
+    &--info {
       position: absolute;
       left: -6%;
       bottom: 5%;
@@ -218,7 +218,232 @@
     height: 47px;
   }
 }
-.ninety .ninety__paragraph{
+
+.ninety .ninety__paragraph {
   padding: 14px 23px 30px;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 1200px) {
+  .ninety__exploitation--text {
+    width: 33%;
+  }
+
+  .ninety__name {
+    width: 88%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .ninety__name {
+    padding-left: 5%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .ninety__heading--info {
+    width: 32%;
+  }
+
+  .ninety__exploitation--info {
+    width: 63%;
+  }
+
+  .ninety__panorama--info {
+    width: 53%;
+  }
+
+  .ninety__branch--info {
+    padding: 7px 20px;
+    width: 57%;
+  }
+
+  .ninety__visit--info {
+    width: 51%;
+    padding: 7px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ninety__heading--info {
+    width: 41%;
+    padding: 15px;
+  }
+
+  .ninety__heading {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 70px;
+  }
+
+  .ninety .ninety__exploitation {
+    flex-direction: column;
+    flex-flow: column-reverse;
+    align-items: flex-start;
+  }
+
+  .ninety__exploitation--wrap {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .ninety__exploitation--info {
+    right: 0;
+  }
+
+  .ninety .ninety__exploitation--text {
+    width: 80%;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .ninety .ninety__data {
+    margin-left: 19px;
+    margin-right: 0;
+    &:before {
+      right: auto;
+      left: -19px;
+    }
+  }
+
+  .ninety .ninety__text {
+    flex-direction: column;
+  }
+
+  .ninety .ninety__info {
+    width: 80%;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+
+  .ninety__station {
+    width: 100%;
+  }
+
+  .ninety .ninety__row {
+    width: 80%;
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .ninety__panorama {
+    width: 100%;
+  }
+
+  .ninety__panorama:before {
+    right: 0;
+  }
+
+  .ninety__branch:before {
+    right: 0;
+  }
+
+  .ninety__branch {
+    width: 100%;
+  }
+
+  .ninety__branch--info {
+    left: 0;
+    width: 61%;
+  }
+
+  .ninety__visit {
+    width: 100%;
+  }
+
+  .ninety__visit--info {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .ninety {
+    margin-bottom: 80px;
+    padding: 0 5px;
+  }
+
+  .ninety__heading:before,
+  .ninety__heading:after {
+    display: none;
+  }
+
+  .ninety__heading--info {
+
+    position: static;
+    width: 100%;
+    text-align: left;
+  }
+
+  .ninety__name {
+    font-size: 47px;
+    margin-bottom: 45px;
+  }
+
+  .ninety .ninety__exploitation--text {
+    width: 97%;
+
+  }
+
+  .ninety__exploitation--info {
+    position: static;
+    width: 100%;
+  }
+
+  .ninety__exploitation--wrap:before {
+    left: 0;
+  }
+
+  .ninety .ninety__info {
+    width: 97%;
+  }
+
+  .ninety__text {
+    margin-bottom: 30px;
+  }
+
+  .ninety__station--info {
+    padding: 10px;
+    position: static;
+  }
+
+  .ninety .ninety__row {
+    width: 97%;
+    margin-bottom: 70px;
+  }
+
+  .ninety__panorama:after {
+    display: none;
+  }
+  .ninety__panorama--info {
+    width: 100%;
+    position: static;
+    text-align: left;
+    padding: 7px;
+  }
+  .ninety__panorama {
+    margin: 0 auto 60px;
+  }
+  .ninety__branch:after {
+   display: none;
+  }
+  .ninety__branch--info {
+    width: 100%;
+    padding: 6px;
+    position: static;
+  }
+  .ninety__branch {
+    margin-bottom: 70px;
+  }
+  .ninety__visit--info {
+    position: static;
+    padding: 7px;
+    width: 100%;
+  }
+  .ninety__visit:after {
+    display: none;
+  }
+  .ninety__visit:before {
+    left: 0;
+    width: 100%;
+  }
 }
