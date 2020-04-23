@@ -1,0 +1,106 @@
+.ninety {
+  margin-bottom: 250px;
+  &__heading {
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 135px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 231px;
+      height: 16px;
+      left: 15px;
+      top: -16px;
+      background: #E16010;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 231px;
+      height: 16px;
+      right: 15px;
+      bottom: -16px;
+      background: #E16010;
+    }
+    &--info {
+      position: absolute;
+      left: 0;
+      bottom: 12%;
+      width: 23%;
+      background: #005C93;
+      text-align: right;
+      padding: 14px 23px;
+      box-sizing: border-box;
+    }
+  }
+  &__name {
+    padding-left: 6%;
+    font-family: "Rodchenko", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 120%;
+    color: #000000;
+    position: relative;
+    width: 82%;
+    margin-bottom: 114px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 122px;
+      left: 0;
+      top: 0;
+      background: #005C93;
+    }
+  }
+  &__exploitation {
+    align-items: center;
+    margin-bottom: 89px;
+    &--wrap {
+      position: relative;
+      width: 62%;
+      margin-right: 2%;
+      &:before {
+        content: "";
+        position: absolute;
+        background: #E16010;
+        width: 231px;
+        height: 16px;
+        top: -16px;
+        left: 32%;
+      }
+    }
+    &--info {
+      position: absolute;
+      padding: 15px;
+      box-sizing: border-box;
+      right: -3%;
+      bottom: 11%;
+      width: 42%;
+      background: #005C93;
+    }
+    &--text {
+      width: 27%;
+      align-items: flex-start;
+    }
+  }
+  &__text {
+    justify-content: space-between;
+    margin-bottom: 76px;
+  }
+  &__info{
+    width: 47%;
+  }
+}
+
+.ninety .ninety__data {
+  margin-left: 0;
+  margin-right: 19px;
+  &:before {
+    right: -19px;
+    left: auto;
+    height: 47px;
+  }
+}

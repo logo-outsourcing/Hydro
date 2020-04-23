@@ -18,7 +18,8 @@ $(document).ready(function () {
     $("a.zoom").fancybox({
         buttons: [
             "close",
-        ]
+        ],
+        touch: false
     });
 
 // Open burger menu
