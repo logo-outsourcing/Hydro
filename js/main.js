@@ -71,5 +71,29 @@ $(document).ready(function () {
         $(".main__button--close").toggleClass('main__button--visible');
     });
 
-
+//Slider
+    $('.contemporary__slider').slick({
+        dots: true,
+        arrows: true,
+        infinite: true,
+        adaptiveHeight: true,
+        swipe: false,
+        slidesToShow: 1,
+        slide: "div",
+        dotsClass: ' slick-dots contemporary__dots',
+        prevArrow: ".contemporary__prev",
+        nextArrow: ".contemporary__next",
+    });
+    $('.contemporary__transformer--slider').slick({
+        dots: true,
+        arrows: true,
+        infinite: true,
+        adaptiveHeight: true,
+        swipe: false,
+        slidesToShow: 1,
+        slide: "div",
+        dotsClass: ' slick-dots contemporary__dots',
+        prevArrow: ".contemporary__transformer--prev",
+        nextArrow: ".contemporary__transformer--next",
+    });
 });
