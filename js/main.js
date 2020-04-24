@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    var bLazy = new Blazy();
 
     //Animation scroll
 
