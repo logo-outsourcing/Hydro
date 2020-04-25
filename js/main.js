@@ -96,4 +96,78 @@ $(document).ready(function () {
         prevArrow: ".contemporary__transformer--prev",
         nextArrow: ".contemporary__transformer--next",
     });
+    $(".modal").each( function(){
+        $(this).wrap('<div class="overlay"></div>')
+    });
+
+    $(".open-modal").on('click', function(e){
+        e.preventDefault();
+        e.stopImmediatePropagation;
+
+        var $this = $(this),
+            modal = $($this).data("modal");
+
+        $(modal).parents(".overlay").addClass("open");
+        setTimeout( function(){
+            $(modal).addClass("open");
+        }, 350);
+
+        $(document).on('click', function(e){
+            var target = $(e.target);
+
+            if ($(target).hasClass("overlay")){
+                $(target).find(".modal").each( function(){
+                    $(this).removeClass("open");
+                });
+                setTimeout( function(){
+                    $(target).removeClass("open");
+                }, 350);
+            }
+
+        });
+
+    });
+
+    $(".close-modal").on('click', function(e){
+        e.preventDefault();
+        e.stopImmediatePropagation;
+
+        var $this = $(this),
+            modal = $($this).data("modal");
+
+        $(modal).removeClass("open");
+        setTimeout( function(){
+            $(modal).parents(".overlay").removeClass("open");
+        }, 350);
+
+    });
+
+    $('.js-button').on("click", function () {
+        $('.interactive__info').addClass("interactive__info--open");
+        $('.interactive__picture').addClass("interactive__picture--hidden");
+        $('.interactive__picture--changed').addClass("interactive__picture--visible");
+    });
+    $('.js-button-false').on("click",function () {
+            $(this).addClass("interactive__button--false");
+            $(this).addClass("interactive__button--wron");
+    });
+    $('.js-button-true').on("click",function () {
+        $(this).addClass("interactive__button--true");
+        $(this).addClass("interactive__button--check");
+    });
+    $(document).on('click', 'a', function (event) {
+        event.preventDefault();
+    });
+    $(".interactive__farther").click(function () {
+        $('.interactive__info').removeClass("interactive__info--open");
+        $('.interactive__picture').removeClass("interactive__picture--hidden");
+        $('.interactive__picture--changed').removeClass("interactive__picture--visible");
+        var question = $(this).attr('data-src');
+        if (question < 12) {
+            var current = '#question_' + question;
+            var next = '#question_' + (parseInt(question) + 1);
+            $(current).addClass('interactive__item--hidden');
+            $(next).removeClass('interactive__item--hidden')
+        }
+    });
 });
