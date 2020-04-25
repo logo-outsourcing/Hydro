@@ -379,7 +379,7 @@
       background: #E16010;
       box-sizing: border-box;
       left: 22%;
-      width: 17%;
+      width: 19%;
     }
   }
   &__river {
@@ -451,19 +451,19 @@
     &:after {
       content: "";
       position: absolute;
-      width: 160px;
-      height: 21px;
-      right: 0;
-      bottom: 0;
+      width: 21px;
+      height: 160px;
+      right: 4%;
+      bottom: -92%;
       background: #005C93;
     }
     &:before {
       content: "";
       position: absolute;
-      width: 160px;
-      height: 21px;
-      right: 0;
-      bottom: 0;
+      width: 21px;
+      height: 160px;
+      right: 6%;
+      bottom: -145%;
       background: #E16010;
     }
     &--box {
@@ -715,6 +715,21 @@
   .contemporary__button--prev {
     left: -5%;
   }
+
+  .contemporary__starting--info {
+    width: 71%;
+    left: auto;
+    right: 0;
+    bottom: 0;
+  }
+
+  .contemporary__starting--wrap:after {
+    display: none;
+  }
+
+  .contemporary__starting:after {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -763,18 +778,8 @@
     width: 45%;
   }
 
-  .contemporary__starting--info {
-    width: 71%;
-    left: auto;
-    right: 0;
-  }
-
   .contemporary__starting {
     align-items: flex-start;
-  }
-
-  .contemporary__starting--wrap:after {
-    display: none;
   }
 
   .contemporary__info--inner:before {
@@ -793,6 +798,9 @@
     width: 64%;
   }
 
+  .contemporary__foreword--info {
+    width: 35%;
+  }
 }
 
 @media screen and (max-width: 990px) {
@@ -905,6 +913,19 @@
   .contemporary__info--item:before {
     left: 23%;
     right: auto;
+  }
+
+  .contemporary__element:before {
+    bottom: -112%;
+  }
+
+  .contemporary__info--item:before {
+    display: none;
+  }
+
+  .contemporary .contemporary__info--element {
+    flex-flow: row-reverse;
+    text-align: left;
   }
 }
 
@@ -1025,218 +1046,325 @@
     margin-bottom: 68px;
     flex-direction: column;
   }
+
   .contemporary .contemporary__line--inner {
     text-align: left;
     margin-left: 0;
     flex-flow: column-reverse;
   }
+
   .contemporary__windmills {
     width: 100%;
     margin: 0 auto 100px;
   }
+
   .contemporary__windmills--info {
     width: 48%;
   }
+
   .contemporary__river {
     margin: 0 auto 100px;
     width: 100%;
   }
+
   .contemporary__river--info {
     width: 42%;
     padding: 10px;
     left: 0;
   }
+
   .contemporary__watercourse--info {
     width: 59%;
     padding: 10px;
   }
+
   .contemporary .contemporary__element {
-   flex-direction: column;
+    flex-direction: column;
     margin: 0 auto 80px;
   }
+
   .contemporary .contemporary__element--box {
     width: 80%;
     flex-direction: column;
     margin-bottom: 25px;
   }
+
   .contemporary__transformer--info {
     width: 47%;
     padding: 10px;
   }
+
   .contemporary .contemporary__starting {
     flex-direction: column;
   }
+
   .contemporary__starting--wrap {
     position: relative;
     width: 100%;
     margin-bottom: 50px;
   }
+
   .contemporary__starting--box {
     width: 100%;
   }
+
   .contemporary .contemporary__info--item {
     flex-direction: column;
   }
-  .contemporary__info--item:before {
-    display: none;
-  }
+
   .contemporary__info--inner {
     padding-bottom: 80px;
   }
-  .contemporary .contemporary__info--element{
+
+  .contemporary .contemporary__info--element {
     flex-flow: column-reverse;
-    text-align: left;
   }
+
   .contemporary__foreword--info {
     width: 56%;
     padding: 10px;
   }
+
   .contemporary__foreword--box {
     width: 99%;
     padding: 15px;
   }
+
   .contemporary__foreword--name {
     width: 82%;
   }
+
   .contemporary__foreword--wrap:after {
     left: 25%;
   }
+
   .contemporary__turbine:after {
     display: none;
   }
+
+  .contemporary__robot {
+    margin: 0 auto 100px;
+  }
+
+  .contemporary__element:after {
+    bottom: -39%;
+  }
+
+  .contemporary__element:before {
+    bottom: -48%;
+  }
 }
-@media screen and (max-width: 576px){
+
+@media screen and (max-width: 576px) {
   .contemporary {
     margin-bottom: 80px;
     padding: 0 5px;
   }
+
+  .contemporary__element:after {
+    display: none;
+  }
+
+  .contemporary__element:before {
+    display: none;
+  }
+
+  .contemporary__starting--info {
+    padding: 0;
+  }
+
   .contemporary__station--name {
     position: static;
   }
+
   .contemporary__station:before {
-   display: none;
+    display: none;
   }
+
   .contemporary__station:after {
     display: none;
   }
+
   .contemporary__station--info {
     position: static;
     padding: 5px;
   }
+
   .contemporary .contemporary__implementation {
     width: 97%;
   }
+
   .contemporary__turbine--info {
     width: 100%;
     left: 0;
     padding: 2px;
     bottom: 0;
   }
+
   .contemporary__transfer--box:after {
     display: none;
   }
+
   .contemporary__transfer--info {
     position: static;
     width: 100%;
   }
+
   .contemporary__powerhouse--image:after {
-   display: none;
+    display: none;
   }
+
   .contemporary__powerhouse:after {
-   display: none;
+    display: none;
   }
+
   .contemporary__powerhouse--info {
     width: 100%;
     position: static;
   }
+
   .contemporary .contemporary__box--info {
     width: 97%;
   }
+
   .contemporary .contemporary__robot--box {
     width: 93%;
     padding-left: 22px;
   }
+
   .contemporary__robot--name {
     font-size: 25px;
   }
+
   .contemporary__robot--info {
     position: static;
   }
+
   .contemporary__robot {
     margin: 0 auto 60px;
   }
+
   .contemporary .contemporary__panel--text {
     width: 97%;
   }
+
   .contemporary__panel--info {
     position: static;
     padding: 4px;
   }
+
   .contemporary__panel {
     margin-bottom: 60px;
   }
+
   .contemporary .contemporary__eastern--text {
     width: 97%;
   }
+
   .contemporary__eastern--info {
     width: 100%;
     position: static;
   }
+
   .contemporary__eastern--wrap:after {
     display: none;
   }
+
   .contemporary .contemporary__line--wrap {
     width: 97%;
   }
+
   .contemporary__windmills--info {
     width: 100%;
     position: static;
   }
+
   .contemporary__river--info {
     width: 100%;
     padding: 4px;
     position: static;
   }
+
   .contemporary__text {
     font-size: 25px;
     margin-bottom: 60px;
   }
+
   .contemporary__river {
     margin: 0 auto 60px;
   }
+
   .contemporary__watercourse--info {
     width: 100%;
     padding: 0;
     position: static;
   }
+
   .contemporary .contemporary__element--box {
     width: 97%;
   }
+
   .contemporary__transformer--info {
     width: 100%;
     position: static;
   }
+
   .contemporary__transformer--item:after {
-  display: none;
+    display: none;
   }
+
   .contemporary__starting--wrap:before {
     width: 100%;
     left: 0;
   }
+
   .contemporary__starting:after {
-  display: none;
+    display: none;
   }
+
   .contemporary__starting {
     margin-bottom: 60px;
   }
+
   .contemporary__foreword--wrap:after {
-   display: none;
+    display: none;
   }
+
   .contemporary__foreword--info {
     width: 100%;
-   position: static;
+    position: static;
   }
+
   .contemporary__foreword--name {
     width: 100%;
+  }
+
+  .contemporary__robot--name:before {
+    height: 100%;
+  }
+
+  .contemporary__wrap:after {
+    display: none;
+  }
+
+  .contemporary__wrap:before {
+    display: none;
+  }
+
+  .contemporary__wrap {
+    margin-bottom: 80px;
+  }
+
+  .contemporary__watercourse {
+    margin: 0 auto 60px;
+  }
+
+  .contemporary__info--text {
+    font-size: 27px;
+  }
+
+  .contemporary__starting--text {
+    font-size: 21px;
+    margin-bottom: 20px;
   }
 }
