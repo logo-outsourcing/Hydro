@@ -62,10 +62,9 @@ $(document).ready(function () {
 
     //header video
     setTimeout(function () {
-
-        $('.header__video').attr('src', 'https://logo-outsourcing.github.io/Hydro/video/video2.mp4');
-        $('.header__video').addClass('header__video--small');
+            $('.header__video').addClass('header__video--small');
         $('.header__film').addClass('header__film--visible');
+        $('#wrap').addClass("header__background");
     }, 4000);
 
     $('.header__film').click(function () {
@@ -74,11 +73,13 @@ $(document).ready(function () {
             "                        frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\n" +
             "                        allowfullscreen></iframe>";
         $('.header__film--wrap').html(film);
+        $('#wrap').removeClass("header__background");
     });
     $('.header__film--close').on("click", function (e) {
         e.preventDefault();
         $('.header__film--wrap').html("");
         $('.header__film--open').removeClass('header__film--play');
+        $('#wrap').addClass("header__background");
     });
     var bLazy = new Blazy();
 
