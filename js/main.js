@@ -62,8 +62,9 @@ $(document).ready(function () {
 
     //header video
     setTimeout(function () {
-        $('.header__video').addClass('header__video--small');
+
         $('.header__video').attr('src', 'https://logo-outsourcing.github.io/Hydro/video/video2.mp4');
+        $('.header__video').addClass('header__video--small');
         $('.header__film').addClass('header__film--visible');
     }, 4000);
 
