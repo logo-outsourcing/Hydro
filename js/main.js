@@ -69,7 +69,11 @@ $(document).ready(function () {
         var target = $(this).attr('href');
         $('html, body').animate({scrollTop: $(target).offset().top}, 1000);
         return false;
-
+    });
+    $('.header__navigation--test').click(function () {
+        $('.header__box').toggleClass('header__box--open');
+        $('.header__open').removeClass('header__hidden');
+        $('.header__close').removeClass('header__visible');
     });
     //Open gallery
 
