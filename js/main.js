@@ -62,7 +62,7 @@ $(document).ready(function () {
 
     //header video
     setTimeout(function () {
-            $('.header__video').addClass('header__video--small');
+        $('.header__video').addClass('header__video--small');
         $('.header__film').addClass('header__film--visible');
         $('#wrap').addClass("header__background");
     }, 4000);
