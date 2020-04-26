@@ -1,4 +1,6 @@
 'use strict';
+
+//test question
 var questions = {
     1: 2,
     2: 1,
@@ -47,6 +49,7 @@ function size(obj) {
     return size;
 };
 
+//sum of correct answers
 function getResults() {
     let summary = 0;
     results.map(function (value, key) {
@@ -56,6 +59,8 @@ function getResults() {
 }
 
 $(document).ready(function () {
+
+    //header video
     setTimeout(function () {
         $('.header__video').addClass('header__video--small');
         $('.header__video').attr('src', 'https://logo-outsourcing.github.io/Hydro/video/video2.mp4');
@@ -178,6 +183,7 @@ $(document).ready(function () {
     $(".modal").each(function () {
         $(this).wrap('<div class="overlay"></div>')
     });
+//open modal test
 
     $(".open-modal").on('click', function (e) {
         e.preventDefault();
