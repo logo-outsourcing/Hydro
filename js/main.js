@@ -56,8 +56,24 @@ function getResults() {
 }
 
 $(document).ready(function () {
+    setTimeout(function () {
+        $('.header__video').addClass('header__video--small');
+        $('.header__video').attr('src', 'https://logo-outsourcing.github.io/Hydro/video/video2.mp4');
+        $('.header__film').addClass('header__film--visible');
+    }, 4000);
 
-
+    $('.header__film').click(function () {
+        $('.header__film--open').addClass('header__film--play');
+        var film = " <iframe class=\"header__iframe\"  src=\"https://www.youtube.com/embed/hEOD_4Cf1ao?controls=0&autoplay=1\"\n" +
+            "                        frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\n" +
+            "                        allowfullscreen></iframe>";
+        $('.header__film--wrap').html(film);
+    });
+    $('.header__film--close').on("click", function (e) {
+        e.preventDefault();
+        $('.header__film--wrap').html("");
+        $('.header__film--open').removeClass('header__film--play');
+    });
     var bLazy = new Blazy();
 
     //Animation scroll
