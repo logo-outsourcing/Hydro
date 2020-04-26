@@ -18,7 +18,7 @@ var results = [];
 function answer(questionNumber, answerValue) {
     $("#explanations-" + questionNumber).addClass("interactive__info--open");
 
-    $("#picture-" + questionNumber).attr('src', '/img/test/changed' + questionNumber + '.png');
+    $("#picture-" + questionNumber).attr('src', 'img/test/changed' + questionNumber + '.png');
 
     if (results[questionNumber] !== undefined) {
         return;
