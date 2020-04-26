@@ -1,4 +1,61 @@
+'use strict';
+var questions = {
+    1: 2,
+    2: 1,
+    3: 2,
+    4: 4,
+    5: 3,
+    6: 1,
+    7: 1,
+    8: 2,
+    9: 3,
+    10: 4,
+    11: 3,
+    12: 3,
+};
+var results = [];
+
+function answer(questionNubmer, answerValue) {
+    if (results[questionNubmer] !== undefined) {
+        return;
+    }
+    let result;
+    if (questions[questionNubmer] === answerValue) {
+        result = 1;
+    } else {
+        result = 0;
+    }
+    let selector = '#question-' + questionNubmer + '-option-' + answerValue;
+    if (result === 1) {
+        $(selector).addClass('interactive__button--true interactive__button--check')
+    } else {
+        $(selector).addClass('interactive__button--false interactive__button--wron')
+    }
+    results[questionNubmer] = result;
+    $('.interactive__info').addClass("interactive__info--open");
+    $('.interactive__picture').addClass("interactive__picture--hidden");
+    $('.interactive__picture--changed').addClass("interactive__picture--visible");
+};
+
+function size(obj) {
+    var size = 0, key;
+    for (key in obj) {
+        if (obj.hasOwnProperty(key)) size++;
+    }
+    return size;
+};
+
+function getResults() {
+    let summary = 0;
+    results.map(function (value, key) {
+        summary += value;
+    });
+    $('.interactive__result--number').text(summary);
+}
+
 $(document).ready(function () {
+
+
     var bLazy = new Blazy();
 
     //Animation scroll
@@ -96,11 +153,11 @@ $(document).ready(function () {
         prevArrow: ".contemporary__transformer--prev",
         nextArrow: ".contemporary__transformer--next",
     });
-    $(".modal").each( function(){
+    $(".modal").each(function () {
         $(this).wrap('<div class="overlay"></div>')
     });
 
-    $(".open-modal").on('click', function(e){
+    $(".open-modal").on('click', function (e) {
         e.preventDefault();
         e.stopImmediatePropagation;
 
@@ -108,18 +165,18 @@ $(document).ready(function () {
             modal = $($this).data("modal");
 
         $(modal).parents(".overlay").addClass("open");
-        setTimeout( function(){
+        setTimeout(function () {
             $(modal).addClass("open");
         }, 350);
 
-        $(document).on('click', function(e){
+        $(document).on('click', function (e) {
             var target = $(e.target);
 
-            if ($(target).hasClass("overlay")){
-                $(target).find(".modal").each( function(){
+            if ($(target).hasClass("overlay")) {
+                $(target).find(".modal").each(function () {
                     $(this).removeClass("open");
                 });
-                setTimeout( function(){
+                setTimeout(function () {
                     $(target).removeClass("open");
                 }, 350);
             }
@@ -128,7 +185,7 @@ $(document).ready(function () {
 
     });
 
-    $(".close-modal").on('click', function(e){
+    $(".close-modal").on('click', function (e) {
         e.preventDefault();
         e.stopImmediatePropagation;
 
@@ -136,25 +193,26 @@ $(document).ready(function () {
             modal = $($this).data("modal");
 
         $(modal).removeClass("open");
-        setTimeout( function(){
+        setTimeout(function () {
             $(modal).parents(".overlay").removeClass("open");
         }, 350);
 
     });
 
-    $('.js-button').on("click", function () {
-        $('.interactive__info').addClass("interactive__info--open");
-        $('.interactive__picture').addClass("interactive__picture--hidden");
-        $('.interactive__picture--changed').addClass("interactive__picture--visible");
-    });
-    $('.js-button-false').on("click",function () {
-            $(this).addClass("interactive__button--false");
-            $(this).addClass("interactive__button--wron");
-    });
-    $('.js-button-true').on("click",function () {
-        $(this).addClass("interactive__button--true");
-        $(this).addClass("interactive__button--check");
-    });
+
+    // $('.js-button').on("click", function () {
+    //     $('.interactive__info').addClass("interactive__info--open");
+    //     $('.interactive__picture').addClass("interactive__picture--hidden");
+    //     $('.interactive__picture--changed').addClass("interactive__picture--visible");
+    // });
+    // $('.js-button-false').on("click",function () {
+    //         $(this).addClass("interactive__button--false");
+    //         $(this).addClass("interactive__button--wron");
+    // });
+    // $('.js-button-true').on("click",function () {
+    //     $(this).addClass("interactive__button--true");
+    //     $(this).addClass("interactive__button--check");
+    // });
     $(document).on('click', 'a', function (event) {
         event.preventDefault();
     });
@@ -163,7 +221,7 @@ $(document).ready(function () {
         $('.interactive__picture').removeClass("interactive__picture--hidden");
         $('.interactive__picture--changed').removeClass("interactive__picture--visible");
         var question = $(this).attr('data-src');
-        if (question < 12) {
+        if (question < 13) {
             var current = '#question_' + question;
             var next = '#question_' + (parseInt(question) + 1);
             $(current).addClass('interactive__item--hidden');
