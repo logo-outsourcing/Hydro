@@ -15,26 +15,28 @@ var questions = {
 };
 var results = [];
 
-function answer(questionNubmer, answerValue) {
-    if (results[questionNubmer] !== undefined) {
+function answer(questionNumber, answerValue) {
+    $("#explanations-" + questionNumber).addClass("interactive__info--open");
+
+    $("#picture-" + questionNumber).attr('src', '/img/test/changed' + questionNumber + '.png');
+
+    if (results[questionNumber] !== undefined) {
         return;
     }
     let result;
-    if (questions[questionNubmer] === answerValue) {
+    if (questions[questionNumber] === answerValue) {
         result = 1;
     } else {
         result = 0;
     }
-    let selector = '#question-' + questionNubmer + '-option-' + answerValue;
+    let selector = '#question-' + questionNumber + '-option-' + answerValue;
     if (result === 1) {
         $(selector).addClass('interactive__button--true interactive__button--check')
     } else {
         $(selector).addClass('interactive__button--false interactive__button--wron')
     }
-    results[questionNubmer] = result;
-    $('.interactive__info').addClass("interactive__info--open");
-    $('.interactive__picture').addClass("interactive__picture--hidden");
-    $('.interactive__picture--changed').addClass("interactive__picture--visible");
+    results[questionNumber] = result;
+
 };
 
 function size(obj) {
@@ -200,32 +202,16 @@ $(document).ready(function () {
     });
 
 
-    // $('.js-button').on("click", function () {
-    //     $('.interactive__info').addClass("interactive__info--open");
-    //     $('.interactive__picture').addClass("interactive__picture--hidden");
-    //     $('.interactive__picture--changed').addClass("interactive__picture--visible");
-    // });
-    // $('.js-button-false').on("click",function () {
-    //         $(this).addClass("interactive__button--false");
-    //         $(this).addClass("interactive__button--wron");
-    // });
-    // $('.js-button-true').on("click",function () {
-    //     $(this).addClass("interactive__button--true");
-    //     $(this).addClass("interactive__button--check");
-    // });
-    $(document).on('click', 'a', function (event) {
-        event.preventDefault();
-    });
     $(".interactive__farther").click(function () {
-        $('.interactive__info').removeClass("interactive__info--open");
-        $('.interactive__picture').removeClass("interactive__picture--hidden");
-        $('.interactive__picture--changed').removeClass("interactive__picture--visible");
         var question = $(this).attr('data-src');
         if (question < 13) {
             var current = '#question_' + question;
             var next = '#question_' + (parseInt(question) + 1);
             $(current).addClass('interactive__item--hidden');
-            $(next).removeClass('interactive__item--hidden')
+            $(next).removeClass('interactive__item--hidden');
+            setTimeout(function () {
+                $('.overlay').scrollTop(0);
+            }, 100);
         }
     });
 });
