@@ -73,13 +73,11 @@ $(document).ready(function () {
             "                        frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\n" +
             "                        allowfullscreen></iframe>";
         $('.header__film--wrap').html(film);
-        $('#wrap').removeClass("header__background");
     });
     $('.header__film--close').on("click", function (e) {
         e.preventDefault();
         $('.header__film--wrap').html("");
         $('.header__film--open').removeClass('header__film--play');
-        $('#wrap').addClass("header__background");
     });
     var bLazy = new Blazy();
 
