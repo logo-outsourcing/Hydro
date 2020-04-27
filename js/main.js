@@ -23,7 +23,10 @@ function answer(questionNumber, answerValue) {
     $("#picture-" + questionNumber).attr('src', 'img/test/changed' + questionNumber + '.png');
 
     if (results[questionNumber] !== undefined) {
+
         return;
+    } else {
+        $("#description-" + questionNumber + "-option-" + answerValue).addClass("interactive__info--open");
     }
     let result;
     if (questions[questionNumber] === answerValue) {
@@ -33,7 +36,7 @@ function answer(questionNumber, answerValue) {
     }
     let selector = '#question-' + questionNumber + '-option-' + answerValue;
     if (result === 1) {
-        $(selector).addClass('interactive__button--true interactive__button--check')
+        $(selector).addClass('interactive__button--true')
     } else {
         $(selector).addClass('interactive__button--false interactive__button--wron')
     }
@@ -55,6 +58,18 @@ function getResults() {
     results.map(function (value, key) {
         summary += value;
     });
+    if (summary <= 3) {
+        $("#result-1").addClass("interactive__info--open");
+    } else if (summary <= 6) {
+        $("#result-2").addClass("interactive__info--open");
+    }
+    else if (summary <= 9) {
+        $("#result-3").addClass("interactive__info--open");
+    }
+    else if (summary <= 12) {
+        $("#result-4").addClass("interactive__info--open");
+    }
+
     $('.interactive__result--number').text(summary);
 }
 
