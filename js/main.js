@@ -65,7 +65,7 @@ $(document).ready(function () {
         $('.header__film').addClass('header__film--visible');
         $('.header__video').addClass('header__video--small');
 
-    }, 2000);
+    }, 5000);
     $('.header__film').click(function () {
         $('.header__film--open').addClass('header__film--play');
         var film = " <iframe class=\"header__iframe\"  src=\"https://www.youtube.com/embed/hEOD_4Cf1ao?controls=0&autoplay=1\"\n" +
@@ -121,18 +121,11 @@ $(document).ready(function () {
     $('.header__open').click(function (e) {
         e.preventDefault();
         $('.header__box').toggleClass('header__box--open');
-        $('.header__open').toggleClass('header__hidden');
-        $('.header__close').toggleClass('header__visible');
+        $('.header__open').toggleClass('is-active');
     });
 
 //Close burger menu
 
-    $('.header__close').click(function (e) {
-        e.preventDefault();
-        $('.header__box').toggleClass('header__box--open');
-        $('.header__open').removeClass('header__hidden');
-        $('.header__close').removeClass('header__visible');
-    });
 
 //Fixed menu when scrolling
     $(window).scroll(function () {
