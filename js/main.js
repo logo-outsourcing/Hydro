@@ -73,10 +73,18 @@ $(document).ready(function () {
             "                        allowfullscreen></iframe>";
         $('.header__film--wrap').html(film);
     });
+    $('.header__film--mobile').click(function () {
+        $('.header__film--small').addClass('header__film--play');
+        var film = " <iframe class=\"header__iframe\"  src=\"https://www.youtube.com/embed/hEOD_4Cf1ao?controls=0&autoplay=1\"\n" +
+            "                        frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\n" +
+            "                        allowfullscreen></iframe>";
+        $('.header__film--wrap').html(film);
+    });
     $('.header__film--close').on("click", function (e) {
         e.preventDefault();
         $('.header__film--wrap').html("");
         $('.header__film--open').removeClass('header__film--play');
+        $('.header__film--small').removeClass('header__film--play');
     });
     var bLazy = new Blazy();
 
