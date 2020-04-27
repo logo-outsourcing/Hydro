@@ -64,7 +64,7 @@ $(document).ready(function () {
     setTimeout(function () {
         $('.header__film').addClass('header__film--visible');
         $('.header__video').addClass('header__video--small');
-
+        $('.header').addClass('header__block');
     }, 5000);
     $('.header__film').click(function () {
         $('.header__film--open').addClass('header__film--play');

@@ -139,6 +139,10 @@ body {
     height: 400px;
     z-index: -1;
     background: #FFFFFF;
+    transition: height 0.1s;
+  }
+  &__block:after{
+    height: 510px;
   }
   &__heading {
     display: none;
@@ -518,13 +522,13 @@ body {
 }
 
 .header__animate span {
-  transition: background 0s 0.3s;
+  transition: background 0s 0.1s;
 }
 
 .header__animate span::before,
 .header__animate span::after {
   transition-duration: 0.3s, 0.3s;
-  transition-delay: 0.3s, 0s;
+  transition-delay: 0.1s, 0s;
 }
 
 .header__animate span::before {
