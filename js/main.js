@@ -36,7 +36,7 @@ function answer(questionNumber, answerValue) {
     }
     let selector = '#question-' + questionNumber + '-option-' + answerValue;
     if (result === 1) {
-        $(selector).addClass('interactive__button--true')
+        $(selector).addClass('interactive__button--true interactive__button--check')
     } else {
         $(selector).addClass('interactive__button--false interactive__button--wron')
     }
