@@ -132,8 +132,8 @@ body {
   position: fixed;
   overflow: hidden;
   z-index: 999;
-  background: white;
   transition: opacity 1s;
+  transition-delay: 1.5s;
   opacity: 1;
 }
 
@@ -151,6 +151,9 @@ h4 {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 9;
+  transition: opacity 1s;
+  transition-delay: 1s;
+  opacity: 1;
 
 }
 
@@ -168,12 +171,37 @@ h4 {
     left: 0;
     -webkit-transition: all .7s cubic-bezier(0.645, 0.045, 0.355, 1.000);
     transition: all .7s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+
   }
 
   &.right-side {
     right: 0;
     -webkit-transition: all .7s cubic-bezier(0.645, 0.045, 0.355, 1.000);
     transition: all .7s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+
+  }
+}
+
+.sides-fluid {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  z-index: 9;
+
+  &.left-side-fluid {
+    left: 0;
+    -webkit-transition: all .7s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition: all .7s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition-delay: 1s;
+  }
+
+  &.right-side-fluid {
+    right: 0;
+    -webkit-transition: all .7s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition: all .7s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition-delay: 1s;
   }
 }
 
@@ -290,7 +318,7 @@ h4 {
 }
 
 .loaded {
-
+opacity: 0;
   .left-side {
     transform: translateX(-100%);
   }
@@ -298,9 +326,19 @@ h4 {
   .right-side {
     transform: translateX(100%);
   }
+  .left-side-fluid {
+    transform: translateX(-100%);
+  }
 
+  .right-side-fluid {
+    transform: translateX(100%);
+  }
   .circle {
     opacity: 0;
+  }
+  h4{
+    opacity: 0;
+
   }
 }
 

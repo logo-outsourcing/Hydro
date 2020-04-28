@@ -81,10 +81,8 @@ $(document).ready(function () {
     setTimeout(function () {
         $('.circle').hide();
     }, 1000);
-
     setTimeout(function () {
         $("#preloader").removeClass('preload__animate');
-        $(".container-fluid").css('opacity', "0");
     }, 2000);
     setTimeout(function () {
         $("#preloader").addClass('preload__animate');
