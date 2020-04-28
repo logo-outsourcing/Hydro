@@ -123,6 +123,7 @@ body {
   padding: 10px;
   box-sizing: border-box;
 }
+
 .container-fluid {
   height: 100%;
   width: 100%;
@@ -135,6 +136,7 @@ body {
   transition: opacity 1s;
   opacity: 1;
 }
+
 h4 {
   margin: 0;
   position: absolute;
@@ -216,34 +218,75 @@ h4 {
 }
 
 @-moz-keyframes spin {
-  from { -moz-transform: rotate(0deg); }
-  to { -moz-transform: rotate(360deg); }
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
 }
+
 @-webkit-keyframes spin {
-  from { -webkit-transform: rotate(0deg); }
-  to { -webkit-transform: rotate(360deg); }
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
+
 @keyframes spin {
-  from {transform: rotate(0deg);}
-  25% {transform: rotate(360deg);}
-  50% {transform: rotate(0deg);}
-  75% {transform: rotate(360deg);}
-  to {transform: rotate(0deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
+
 @-moz-keyframes bounce {
-  from { -moz-transform: scale(1); }
-  50% {transform:scale(0.8);}
-  to { -moz-transform: scale(1); }
+  from {
+    -moz-transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  to {
+    -moz-transform: scale(1);
+  }
 }
+
 @-webkit-keyframes bounce {
-  from { -webkit-transform: scale(1); }
-  50% {transform:scale(0.8);}
-  to { -webkit-transform: scale(1); }
+  from {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
+
 @keyframes bounce {
-  from {transform:scale(1);}
-  50% {transform:scale(0.8);}
-  to {transform:scale(1);}
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .loaded {
@@ -260,7 +303,8 @@ h4 {
     opacity: 0;
   }
 }
-.preload{
+
+.preload {
   position: fixed;
   left: 0;
   top: 0;
@@ -269,16 +313,17 @@ h4 {
   z-index: 99;
   background: #000;
   height: 100vh;
- transition: opacity 1s;
+  transition: opacity 1s;
   opacity: 1;
 
-  &__animate{
-    opacity:0;
+  &__animate {
+    opacity: 0;
   }
-  &__hidden{
+  &__hidden {
     display: none;
   }
 }
+
 //start header
 
 .header {
@@ -432,7 +477,7 @@ h4 {
   //
   //  }
   //}
-  &__poster{
+  &__poster {
     position: absolute;
     top: -2%;
     right: -24%;
