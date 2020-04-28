@@ -75,16 +75,16 @@ function getResults() {
 
 $(document).ready(function () {
 
-    setTimeout(function() {
+    setTimeout(function () {
         $('.container-fluid').addClass('loaded');
     }, 1000);
-    setTimeout(function() {
+    setTimeout(function () {
         $('.circle').hide();
     }, 1000);
 
     setTimeout(function () {
         $("#preloader").removeClass('preload__animate');
-        $(".container-fluid").css('opacity',"0");
+        $(".container-fluid").css('opacity', "0");
     }, 2000);
     setTimeout(function () {
         $("#preloader").addClass('preload__animate');
@@ -93,7 +93,6 @@ $(document).ready(function () {
             $(".container-fluid").addClass('preload__hidden');
         }, 1000);
     }, 7000);
-
 
 
     //header video
