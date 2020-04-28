@@ -75,16 +75,24 @@ function getResults() {
 
 $(document).ready(function () {
 
+    setTimeout(function() {
+        $('.container-fluid').addClass('loaded');
+    }, 3000);
+    setTimeout(function() {
+        $('.circle').hide();
+    }, 5000);
+
     setTimeout(function () {
         $("#preloader").removeClass('preload__animate');
-        $(".loader").addClass('loader__hidden');
-    }, 1000);
+        $(".container-fluid").css('opacity',"0");
+    }, 7000);
     setTimeout(function () {
         $("#preloader").addClass('preload__animate');
         setTimeout(function () {
             $("#preloader").addClass('preload__hidden');
+            $(".container-fluid").addClass('preload__hidden');
         }, 1000);
-    }, 5000);
+    }, 12000);
 
 
 

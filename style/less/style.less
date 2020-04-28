@@ -123,29 +123,138 @@ body {
   padding: 10px;
   box-sizing: border-box;
 }
-.loader{
-  position: fixed;
-  top: 0;
-  left: 0;
+.container-fluid {
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  background: white;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  top: 0;
+  left: 0;
+  position: fixed;
+  overflow: hidden;
   z-index: 999;
-  padding: 1em;
-  margin: 0 auto 1em;
-  vertical-align: top;
-  &__hidden{
-    display: none;
+  background: white;
+  transition: opacity 1s;
+  opacity: 1;
+}
+h4 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 9;
+
+}
+
+//Preloader Styles
+
+.sides {
+  background: #000;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  z-index: 9;
+
+  &.left-side {
+    left: 0;
+    -webkit-transition: all .7s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition: all .7s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  }
+
+  &.right-side {
+    right: 0;
+    -webkit-transition: all .7s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transition: all .7s cubic-bezier(0.645, 0.045, 0.355, 1.000);
   }
 }
-svg path,
-svg rect{
-  fill: #FF6700;
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  z-index: 10;
+  transition: all 0.4s ease;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: #F6901E;
+
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  &:after {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    content: '';
+    width: 70px;
+    height: 70px;
+    border: 3px solid #F6901E;
+    border-bottom: none;
+    border-radius: 100%;
+
+    animation: spin 4s ease-in-out infinite;
+  }
+}
+
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  25% {transform: rotate(360deg);}
+  50% {transform: rotate(0deg);}
+  75% {transform: rotate(360deg);}
+  to {transform: rotate(0deg);}
+}
+@-moz-keyframes bounce {
+  from { -moz-transform: scale(1); }
+  50% {transform:scale(0.8);}
+  to { -moz-transform: scale(1); }
+}
+@-webkit-keyframes bounce {
+  from { -webkit-transform: scale(1); }
+  50% {transform:scale(0.8);}
+  to { -webkit-transform: scale(1); }
+}
+@keyframes bounce {
+  from {transform:scale(1);}
+  50% {transform:scale(0.8);}
+  to {transform:scale(1);}
+}
+
+.loaded {
+
+  .left-side {
+    transform: translateX(-100%);
+  }
+
+  .right-side {
+    transform: translateX(100%);
+  }
+
+  .circle {
+    opacity: 0;
+  }
 }
 .preload{
   position: fixed;
@@ -153,7 +262,7 @@ svg rect{
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: 99;
   background: #000;
   height: 100vh;
  transition: opacity 1s;
