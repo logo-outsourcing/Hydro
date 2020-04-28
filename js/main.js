@@ -76,6 +76,10 @@ function getResults() {
 $(document).ready(function () {
 
     setTimeout(function () {
+        $("#preloader").removeClass('preload__hidden');
+        $(".loader").addClass('loader__hidden');
+    }, 1000);
+    setTimeout(function () {
         $("#preloader").addClass('preload__hidden');
     }, 5000);
 

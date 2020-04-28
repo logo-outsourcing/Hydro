@@ -123,6 +123,30 @@ body {
   padding: 10px;
   box-sizing: border-box;
 }
+.loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 999;
+  padding: 1em;
+  margin: 0 auto 1em;
+  vertical-align: top;
+  &__hidden{
+    display: none;
+  }
+}
+svg path,
+svg rect{
+  fill: #FF6700;
+}
 .preload{
   position: fixed;
   left: 0;
@@ -132,8 +156,11 @@ body {
   z-index: 100;
   background: #000;
   height: 100vh;
+ transition: opacity 1s;
+  opacity: 1;
+
   &__hidden{
-    display: none;
+    opacity:0;
   }
 }
 //start header
