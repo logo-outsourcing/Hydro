@@ -75,12 +75,18 @@ function getResults() {
 
 $(document).ready(function () {
 
-    //header video
     setTimeout(function () {
-        $('.header__film').addClass('header__film--visible');
-        $('.header__video').addClass('header__video--small');
-        $('.header').addClass('header__block');
+        $("#preloader").addClass('preload__hidden');
     }, 5000);
+
+
+
+    //header video
+    // setTimeout(function () {
+    //     $('.header__film').addClass('header__film--visible');
+    //     $('.header__video').addClass('header__video--small');
+    //     $('.header').addClass('header__block');
+    // }, 5000);
     $('.header__film').click(function () {
         $('.header__film--open').addClass('header__film--play');
         var film = " <iframe class=\"header__iframe\"  src=\"https://www.youtube.com/embed/hEOD_4Cf1ao?controls=0&autoplay=1\"\n" +
